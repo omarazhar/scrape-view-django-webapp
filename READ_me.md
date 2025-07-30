@@ -1,6 +1,9 @@
 ﻿# Project: Scrap & View in Django WebApp!
 
-In this Django project, we wil scrape data from an external website, stores it in a SQLite database, and displays it with user authentication and a manual Refresh feature and Schedule run it. Differences between the database and new scraped data are highlighted for approval before updates and sent to user via email. Lastly, log file is created to store logs.
+In this Python based Django web-app project, we will scrape data from a public domain, stores it in a SQLite database, and displays it in our application with user authentication and a manual Refresh feature, and Schedule run it. Differences between the database and new scraped data are highlighted for approval before updates and sent to the user via email. Lastly, a log file is created to store logs.
+
+Libraries used for Webscraping and automation
+``` BeautifulSoup, Selenium```
 
 ## How to Install & Run
 
