@@ -1,0 +1,119 @@
+[2025-07-07 03:26:50,243] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 03:42:41,722] INFO django.utils.autoreload E:\Python automation\automation\prjt\settings.py changed, reloading.
+[2025-07-07 03:42:43,325] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 03:53:12,047] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 04:33:04,993] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 04:33:27,790] INFO django.utils.autoreload E:\Python automation\automation\myautomationApp\views.py changed, reloading.
+[2025-07-07 04:33:29,931] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 04:39:05,592] INFO django.utils.autoreload E:\Python automation\automation\myautomationApp\views.py changed, reloading.
+[2025-07-07 04:39:07,133] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 04:39:10,038] INFO django.utils.autoreload E:\Python automation\automation\myautomationApp\urls.py changed, reloading.
+[2025-07-07 04:39:11,348] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 04:39:24,524] ERROR django.request Internal Server Error: /register/
+Traceback (most recent call last):
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Python automation\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\automation\myautomationApp\views.py", line 32, in register_view
+    return render(request, 'register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[2025-07-07 05:01:04,425] INFO django.utils.autoreload E:\Python automation\automation\myautomationApp\views.py changed, reloading.
+[2025-07-07 05:01:06,193] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 05:07:36,947] ERROR django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\Python automation\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\automation\myautomationApp\views.py", line 40, in index
+    return render(request, 'index.html', {'records': db_data} )
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Python automation\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'logout' not found. 'logout' is not a valid view function or pattern name.
+[2025-07-07 05:09:22,598] INFO django.utils.autoreload E:\Python automation\automation\myautomationApp\views.py changed, reloading.
+[2025-07-07 05:09:23,802] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 05:10:14,857] INFO django.utils.autoreload E:\Python automation\automation\myautomationApp\urls.py changed, reloading.
+[2025-07-07 05:10:16,504] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 05:13:43,789] WARNING django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[2025-07-07 05:29:01,030] INFO django.utils.autoreload E:\Python automation\automation\prjt\settings.py changed, reloading.
+[2025-07-07 05:29:02,711] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 05:30:14,762] INFO django.utils.autoreload E:\Python automation\automation\myautomationApp\views.py changed, reloading.
+[2025-07-07 05:30:16,004] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 07:29:17,394] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-07-07 07:45:59,304] INFO scheduler {'new': [{'name': 'Kelvin AUBICHON', 'age': '30', 'height': '5’ 11”', 'weight': '186 lbs', 'description': '', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2024/AUBICHON.png?w=150'}, {'name': 'Richard HAYWARD', 'age': '65', 'height': '5’6”', 'weight': '166 lbs', 'description': 'Brown hair and brown eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2022/RichardHAYWARD.png?w=150'}, {'name': 'Jaiden BEST', 'age': '23', 'height': '5\'10"', 'weight': '155 lbs', 'description': '23-year-old thin build male, nearly bald with short beard, with very short black hair', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2024/BEST.jpg?w=150'}, {'name': 'Jullian ANDERSON', 'age': '40', 'height': '5\'11"', 'weight': '165 lbs', 'description': 'Thin build, short brown hair, brown eyes, has a tattoo of a flower on his right forearm, pierced right eyebrow and pierced left ear.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2023/Julian%20Most%20wanted%20Picture1.jpg?w=150'}, {'name': 'William MACKINAW', 'age': '45', 'height': '5\' 10"', 'weight': '195 lbs', 'description': 'Medium complexion with brown eyes and hair; and  tattoos on his torso and arms.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2024/william.png?w=150'}, {'name': 'Michael YAKIMCHUK', 'age': '59', 'height': '5\'11"', 'weight': '170 lbs', 'description': 'Green eyes and brown/grey hair.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2017/Yakimchuk.jpg?w=150'}, {'name': 'Megan Lee MARCHEWKA', 'age': '37', 'height': '5\'6"', 'weight': '158lbs', 'description': 'MARCHEWKA has long brown hair and brown eyes. She has numerous tattoos on her arms, shoulders, wrists, and back. MARCHEWKA has a notable tattoo on her right forearm that says “strength” and an image of a diamond on the top of her left hand.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2024/MARCHEWKA1.png?w=150'}, {'name': 'Mohamed Ahmad ZYLSTRA', 'age': '40', 'height': '6\'1"', 'weight': '225 lbs', 'description': '40-year-old male with brown eyes, light brown hair, nearly bald with short beard, and a scar on his head.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2025/mohamed.png?w=150'}, {'name': 'Sinan HADI', 'age': '40', 'height': '5\'10"', 'weight': '179 lbs', 'description': 'Black hair and brown eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2023/HADI.png?w=150'}, {'name': 'Jeffrey PEDERSON', 'age': '66', 'height': '5\'11"', 'weight': '175 lbs', 'description': 'Brown hair and blue eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2023/PEDERSON.png?w=150'}, {'name': 'Blair LaROSE', 'age': '25', 'height': '6\'0"', 'weight': '170 lbs', 'description': 'Black Hair; Brown Eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2015/Blair%20LAROSE.png?w=150'}, {'name': 'Camille PARADIS', 'age': '39', 'height': '6\'1"', 'weight': '145 lbs', 'description': '39 year old white male with short hair and green eyes. Has a tatoo on the left side of his neck and a sleeve on his left arm.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2023/paradis.png?w=150'}, {'name': 'Cody MCKINNON', 'age': '36', 'height': '5\'10"', 'weight': '160 lbs', 'description': 'Blue eyes and blond hair.\xa0 Prominent tattoos: Gargoyle on right forearm, Zodiac on right upper arm and DJ, record and flower on left upper arm.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2019/MCKINNON%20pic.jpg?w=150'}, {'name': 'Kerry Troy MCLACHLAN', 'age': '36', 'height': '5\'9"', 'weight': '185', 'description': 'MCLACHLAN is a 36 year old male, with longer black hair, usually unshaven with goatee and tattoos on the neck and teardrop tattoos under his right eye.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2024/Mclachlan%20Most%20Wanted.jpg?w=150'}, {'name': 'Stefan MARKOVIC', 'age': '31 yrs', 'height': '6\'4"', 'weight': '245 lbs', 'description': 'Brown hair and brown eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2021/Markovic.jpg?w=150'}, {'name': 'Grayson BILTON', 'age': '47', 'height': '6\'1"', 'weight': '210 lbs', 'description': '47-year-old medium build male, with short brown hair and blue eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2024/Bilton.png?w=150'}, {'name': 'Christopher MEER', 'age': '27', 'height': '5\'9"', 'weight': '135 lbs', 'description': 'Brown hair with blonde highlights, Hazel eyes', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/Archives/mw%2020ROBBERY%2020%2020MEERChristopher.jpeg?w=150'}, {'name': 'Louis DUMAIS', 'age': '28', 'height': '5\'10"', 'weight': '165 lbs', 'description': 'Brown hair and brown eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2022/LouisDUMAIS.jpg?w=150'}, {'name': 'Brendon FIRINGSTONEY', 'age': '20', 'height': "6'", 'weight': '200lbs', 'description': "FIRINGSTONEY is 20 years old, 6' tall, 200lbs - heavy build with dark hair.", 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2023/BrendonPicture2.jpg?w=150'}, {'name': 'Umer JAVAID', 'age': '28', 'height': '5\'7"', 'weight': ' 130 lbs', 'description': 'Black hair and brown eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2022/JAVAID.png?w=150'}, {'name': 'Rathunan RAJENDRAN', 'age': '32', 'height': '5\' 10"', 'weight': '220 lbs', 'description': '32-year-old male with brown eyes, dark hair, and a scar above his left eye.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2025/RAJENDRAN.png?w=150'}, {'name': 'Saed OSMAN', 'age': '29 yrs', 'height': '6\'0"', 'weight': '181 lbs', 'description': 'Black hair and brown eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2022/Osman.jpg?w=150'}, {'name': 'Megan BAIROS', 'age': '35', 'height': '5’6”', 'weight': '150 lbs', 'description': 'Blonde hair and blue eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2022/BAIROS.png?w=150'}, {'name': 'Jamie Dallas HUNT', 'age': '29', 'height': '6\'4"', 'weight': '225 lbs', 'description': '29-year-old male of athletic build, short brown hair and brown eyes. Numerous tattoos on head, face with “northside” on neck. Tattoos on both forearms', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2024/JamieDallasHUNT.jpg?w=150'}, {'name': 'Alexander RAUN', 'age': '50', 'height': '5\'10"', 'weight': '163 lbs', 'description': 'Medium build, brown hair, brown eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2023/RAUN.png?w=150'}, {'name': 'Ayoub ALI', 'age': '24', 'height': '5\'9"', 'weight': '115 lbs', 'description': 'Black hair and brown eyes.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2021/Ali.jpg?w=150'}, {'name': 'Daniel John SAKCHEKAPO', 'age': '39', 'height': '5\' 10"', 'weight': '198 lbs', 'description': '39-year-old male of heavy build, short black hair and brown eyes. Tattoo on left neck which says AIDEN KEIRRAH WITH A HEART AND GG FEATHER.  Tattoo on left forearm which says 2 PAC.', 'image_url': 'https://www.edmontonpolice.ca/-/media/EPS%20External/Images/Crime%20Files/MostWanted/2024/DanielMostWanted.png?w=150'}], 'deleted': []}
+[2025-07-07 07:46:01,906] ERROR scheduler Failed to send email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74ce35cc152sm7246989b3a.51 - gsmtp')

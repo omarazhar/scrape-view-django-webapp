@@ -1,0 +1,35 @@
+{% extends 'base_template.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success">{{ message }}</div>
+  {% endfor %}
+{% endif %}
+
+
+{% block content %}
+  <h2 class="text-center mb-4">Login</h2>
+  {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+  {% endif %}
+  <form method="post" action="{% url 'login' %}" class="mx-auto" style="max-width: 400px;">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username or Email</label>
+      <input type="text" name="username" class="form-control" id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="text-center">
+        <a href="{% url 'register' %}" class="btn btn-outline-secondary btn-sm">Register</a>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Login</button>
+
+  </form>
+
+{% endblock %}
+

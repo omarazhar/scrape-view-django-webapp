@@ -1,0 +1,74 @@
+<div class="modal-content">
+  <div class="modal-header bg-primary text-white">
+    <h5 class="modal-title">Detected Changes</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  
+  <div class="modal-body">
+    {% if new_records %}
+    <div class="card mb-3">
+      <div class="card-header bg-success text-white">
+        New Records ({{ new_records|length }})
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Description</th>
+                <th>Image URL</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for record in new_records %}
+              <tr>
+                <td>{{ record.name }}</td>
+                <td>{{ record.age }}</td>
+                <td>{{ record.height }}</td>
+                <td>{{ record.weight }}</td>
+                <td>{{ record.description|truncatechars:50 }}</td>
+                <td>{{ record.image_url | truncatechars:30 }}</td>
+              </tr>
+            {% empty %}
+              <tr>
+                <td colspan="6">No changes detected.</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if deleted_records %}
+    <div class="card">
+      <div class="card-header bg-danger text-white">
+        Records to Remove ({{ deleted_records|length }})
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          {% for record in deleted_records %}
+          <li class="list-group-item">
+            {{ record.name }} (Age: {{ record.age }})
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+    <button hx-post="{% url 'updates_handler' %}"
+            hx-target="#updateModal"
+            class="btn btn-primary">
+      Confirm Changes
+    </button>
+  </div>
+</div>
