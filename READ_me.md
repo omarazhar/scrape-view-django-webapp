@@ -6,23 +6,24 @@ In this Django project, we wil scrape data from an external website, stores it i
 
  1. Unzip the **Python automation** file.
  2. Create a virtual environment & install dependencies
-
+```
     python -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
-	
+```
 3. move to the automation folder
 
-    `cd automation`
+   ``` cd automation ```
 
- 4. Apply migrations
-
+4. Apply migrations
+```
      python  manage.py  makemigrations
      python manage.py migrate
-4. run server and visit the localhost (something like http://127.0.0.1:8000)
-
+```
+5. run server and visit the localhost (something like http://127.0.0.1:8000)
+```
     python manage.py runserver
-
+```
 ## How the Scraper Works
 
 The scraper uses **Selenium + BeautifulSoup** libraries in order to scrape data.
